@@ -69,7 +69,24 @@ Dado que aún los viajes interplanetarios son muy largos, las colonias suelen se
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="5" name="presentacion" tags="" position="575,575" size="100,100"></tw-passagedata></tw-storydata>
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="5" name="presentacion" tags="Juego" position="575,575" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Delex%20en%20su%20camarote.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Tú eres Delex Bran. Eres el capitán de una nave de la colonia Huyuma, en el planeta Tirsoh. Naciste en la colonia Kateilis, en el planeta Urquei. Huyuma es una colonia de Kateilis, la cual se independizó hace 37 años, y en donde iniciaste tu carrera. Luego te asignaron a Huyuma y te radicaste allí.
+
+[[Continuar|la mision]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="6" name="la mision" tags="" position="575,700" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
