@@ -30,11 +30,11 @@ font-size: 16px;
 
 tw-story[tags~="Inicio"] {
  background-image:url("https://cdn.leonardo.ai/users/321f686a-16f6-440a-a132-ebd6d0c5d0a6/generations/2fc77ab4-4bbc-4789-8663-49c9d81d44a4/Leonardo_Phoenix_a_cinematic_highcontrast_photograph_of_a_dyst_2.jpg");
- background-size: cover;</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Menú" tags="Inicio" position="450,225" size="100,100">El Legado de los kerranitas
+ background-size: cover;</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Menú" tags="Inicio" position="75,25" size="100,100">El Legado de los kerranitas
 
 [[Nuevo juego]]
 [[Cargar partida]]
-</tw-passagedata><tw-passagedata pid="2" name="Nuevo juego" tags="Juego" position="600,300" size="100,100">&lt;/style&gt;
+</tw-passagedata><tw-passagedata pid="2" name="Nuevo juego" tags="Juego" position="250,50" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://cdn.leonardo.ai/users/321f686a-16f6-440a-a132-ebd6d0c5d0a6/generations/43eb26b2-60bb-4ec6-a7be-198780eed8d1/Leonardo_Phoenix_a_dramatic_highcontrast_cinematic_photo_of_a_0.jpg&quot; width=100%&gt;
 &lt;/div&gt;
@@ -51,8 +51,8 @@ Corre el año 2643. Hace varios siglos que la humanidad conquistó el espacio. H
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="3" name="Cargar partida" tags="" position="275,350" size="100,100">(link: &quot;Load game: &quot; + (&quot;Slot 1&quot;) of Saves)[
-  (load-game: &quot;Slot 1&quot;)</tw-passagedata><tw-passagedata pid="4" name="intro" tags="Juego" position="425,400" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="3" name="Cargar partida" tags="" position="75,175" size="100,100">(link: &quot;Load game: &quot; + (&quot;Slot 1&quot;) of Saves)[
+  (load-game: &quot;Slot 1&quot;)</tw-passagedata><tw-passagedata pid="4" name="intro" tags="Juego" position="400,75" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://cdn.leonardo.ai/users/321f686a-16f6-440a-a132-ebd6d0c5d0a6/generations/cd082b58-420d-452f-b03c-dc790c6997c4/Leonardo_Phoenix_a_dramatic_highcontrast_cinematic_photograph_2.jpg&quot; width=100%&gt;
 &lt;/div&gt;
@@ -69,12 +69,12 @@ Dado que aún los viajes interplanetarios son muy largos, las colonias suelen se
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="5" name="presentacion" tags="Juego" position="575,575" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="5" name="presentacion" tags="Juego" position="575,100" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;Delex%20en%20su%20camarote.jpg&quot; width=100%&gt;
 &lt;/div&gt;
 
-Tú eres Delex Bran. Eres el capitán de una nave de la colonia Huyuma, en el planeta Tirsoh. Naciste en la colonia Kateilis, en el planeta Urquei. Huyuma es una colonia de Kateilis, la cual se independizó hace 37 años, y en donde iniciaste tu carrera. Luego te asignaron a Huyuma y te radicaste allí.
+Tú eres Delex Bran. Eres el capitán de una nave de la colonia Huyuma, en el planeta Tirsoh. Naciste en la colonia Kateilis, en el planeta Urquei, una colonia que se independizó hace 37 años. Allí viviste tu infancia e iniciaste tu carrera. Huyuma es una colonia de Kateilis y te asignaron allí poco después de obtener el grado de capitán. Desde entonces, no has vuelto a tu planeta natal.
 
 [[Continuar|la mision]]
 
@@ -86,7 +86,72 @@ Tú eres Delex Bran. Eres el capitán de una nave de la colonia Huyuma, en el pl
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="6" name="la mision" tags="" position="575,700" size="100,100"></tw-passagedata></tw-storydata>
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="6" name="la mision" tags="Juego" position="450,200" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Delex%20en%20su%20camarote.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Y ahora has debido abandonar Urquei también. Te diriges con tu nave al planeta Kerranius, un mundo recientemente descubierto, para establecer la primer colonia allí. Harás un alto en la colonia Dayman, en el planeta Hirz, para repostar combustible, dar unos días de descanso a tus hombres (el viaje desde Huyuma a Dayman dura 92 días urqueianos, que son más largos que los terrestres ya que tienen 28 horas) y, lo más importante, subir a los colonos que viajarán al nuevo mundo.
+
+[[Continuar|recorrer la nave]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="7" name="recorrer la nave" tags="Juego" position="325,275" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Delex%20en%20su%20camarote.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+CAPITULO I
+
+[[Ir al puente de mando]]
+[[Ir a la enfermería]]
+[[Ir al laboratorio científico]]
+[[Ir a la sala de esparcimiento]]
+[[Recorrer los pasillos]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] 
+
+
+(set: $cap1_visito_puente to false)
+(set: $cap1_visito_enferm to false)
+(set: $cap1_visito_lab to false)
+(set: $cap1_visito_sala_e to false)
+(set: $cap1_recorro_pasillos to false)</tw-passagedata><tw-passagedata pid="8" name="Ir al puente de mando" tags="Juego" position="100,400" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Jibo%20en%20el%20puente.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+(if:($cap1_visito_puente))[
+Jibo Hyah sigue en el puente.
+](else: )[
+En el puente te encuentras con Jibo Hyah, tu primer oficial. Son viejos amigos, Se conocieron en la Academia.]
+
+[[Continuar|en el puente 01]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="9" name="Ir a la enfermería" tags="" position="250,400" size="100,100"></tw-passagedata><tw-passagedata pid="10" name="Ir al laboratorio científico" tags="" position="450,400" size="100,100"></tw-passagedata><tw-passagedata pid="11" name="Ir a la sala de esparcimiento" tags="" position="625,400" size="100,100"></tw-passagedata><tw-passagedata pid="12" name="Recorrer los pasillos" tags="" position="825,400" size="100,100"></tw-passagedata><tw-passagedata pid="13" name="en el puente 01" tags="" position="100,525" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
