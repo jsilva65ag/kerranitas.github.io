@@ -171,7 +171,7 @@ En la enfermería te encuentras con la doctora Yeoli Bruz. Es la médica de a bo
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="10" name="Ir al laboratorio científico" tags="Juego" position="825,350" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="10" name="Ir al laboratorio científico" tags="Juego" position="825,325" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;Profesor%20Erlaras%20en%20el%20laboratorio.jpg&quot; width=100%&gt;
 &lt;/div&gt;
@@ -191,7 +191,27 @@ En el laboratorio te encuentras con el profesor Carius Erlaras. Es el científic
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="11" name="Ir a la sala de esparcimiento" tags="" position="1050,300" size="100,100"></tw-passagedata><tw-passagedata pid="12" name="Recorrer los pasillos" tags="" position="1200,450" size="100,100"></tw-passagedata><tw-passagedata pid="13" name="&quot;Sí, no tengo una gran vista desde mi camarote. ¿Todo en orden?&quot;" tags="Juego" position="175,700" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="11" name="Ir a la sala de esparcimiento" tags="Juego" position="1050,300" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Likita%20en%20la%20sala%20de%20esparcimiento.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+(if:($cap1_visito_sala_e))[
+Likita sigue en la sala de esparcimiento.
+](else: )[
+La sala de esparcimiento. Un lugar que nada tiene que ver con el resto de la nave. Oficia de bar, restaurante, sala de juegos y espectáculos. Es el lugar al que todos van en sus horas libres. Likita Ngioro está a cargo del lugar.]
+
+[[Continuar|en la sala de esparcimiento]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="12" name="Recorrer los pasillos" tags="" position="1200,450" size="100,100"></tw-passagedata><tw-passagedata pid="13" name="&quot;Sí, no tengo una gran vista desde mi camarote. ¿Todo en orden?&quot;" tags="Juego" position="175,700" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;Jibo%20en%20el%20puente.jpg&quot; width=100%&gt;
 &lt;/div&gt;
@@ -518,7 +538,7 @@ src=&quot;Profesor%20Erlaras%20en%20el%20laboratorio.jpg&quot; width=100%&gt;
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata></tw-storydata>
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="30" name="en la sala de esparcimiento" tags="" position="1050,425" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
