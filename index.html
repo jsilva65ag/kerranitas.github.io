@@ -131,7 +131,7 @@ CAPITULO I
 (set: $cap1_visito_enferm to false)
 (set: $cap1_visito_lab to false)
 (set: $cap1_visito_sala_e to false)
-(set: $cap1_recorro_pasillos to false)</tw-passagedata><tw-passagedata pid="8" name="Ir al puente de mando" tags="Juego" position="225,400" size="100,100">&lt;/style&gt;
+(set: $cap1_recorro_pasillos to false)</tw-passagedata><tw-passagedata pid="8" name="Ir al puente de mando" tags="Juego" position="225,375" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;Jibo%20en%20el%20puente.jpg&quot; width=100%&gt;
 &lt;/div&gt;
@@ -141,7 +141,7 @@ Jibo Hyah sigue en el puente.
 ](else: )[
 En el puente te encuentras con Jibo Hyah, tu primer oficial. Son viejos amigos, Se conocieron en la Academia.]
 
-[[Continuar|en el puente 01]]
+[[Continuar|en el puente]]
 
 {(link:&quot;Guardar partida&quot;)[
   (if:(save-game:&quot;Slot 1&quot;))[
@@ -151,7 +151,189 @@ En el puente te encuentras con Jibo Hyah, tu primer oficial. Son viejos amigos, 
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="9" name="Ir a la enfermería" tags="" position="375,400" size="100,100"></tw-passagedata><tw-passagedata pid="10" name="Ir al laboratorio científico" tags="" position="575,400" size="100,100"></tw-passagedata><tw-passagedata pid="11" name="Ir a la sala de esparcimiento" tags="" position="750,400" size="100,100"></tw-passagedata><tw-passagedata pid="12" name="Recorrer los pasillos" tags="" position="950,400" size="100,100"></tw-passagedata><tw-passagedata pid="13" name="en el puente 01" tags="Juego" position="225,525" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="9" name="Ir a la enfermería" tags="Juego" position="625,350" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Doctora%20Bruz%20en%20la%20enfermería.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+(if:($cap1_visito_enferm))[
+La doctora Bruz sigue en la enfermería.
+](else: )[
+En la enfermería te encuentras con la doctora Yeoli Bruz. Es la médica de a bordo. Es la primera vez que trabajas con ella. Según supiste antes de partir, tiene buenas referencias.]
+
+[[Continuar|en la enfermería]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="10" name="Ir al laboratorio científico" tags="Juego" position="825,350" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Profesor%20Erlaras%20en%20el%20laboratorio.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+(if:($cap1_visito_lab))[
+El profesor Erlaras sigue en el laboratorio.
+](else: )[
+En el laboratorio te encuentras con el profesor Carius Erlaras. Es el científico en jefe. Fue profesor tuyo en la academia.]
+
+[[Continuar|en el laboratorio]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="11" name="Ir a la sala de esparcimiento" tags="" position="1050,300" size="100,100"></tw-passagedata><tw-passagedata pid="12" name="Recorrer los pasillos" tags="" position="1200,450" size="100,100"></tw-passagedata><tw-passagedata pid="13" name="&quot;Sí, no tengo una gran vista desde mi camarote. ¿Todo en orden?&quot;" tags="Juego" position="175,700" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Jibo%20en%20el%20puente.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Jibo: &quot;Sí. Nos atrasamos un poco por lo de la tormenta de asteroides, pero eso es todo.&quot;
+
+[[&quot;Habrá que avisarle al gobernador Maimal.&quot;]]
+[[&quot;Bueno. Mantenme al tanto.&quot;]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="14" name="&quot;Hace tres meses que no veo otra cosa más que el espacio. Quiero un poco de tierra firme bajo mis pies.&quot;" tags="Juego" position="350,650" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Jibo%20en%20el%20puente.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Jibo: &quot;Ánimo. Pronto estarás en Hirz. Nos atrasamos con la bendita tormenta de asteroides, pero llegaremos. Quizás tardemos un par de días más, pero eso es todo, no te preocupes.&quot;
+
+[[&quot;Habrá que avisarle al gobernador Maimal.&quot;]]
+[[&quot;Bueno. Mantenme al tanto.&quot;]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="15" name="&quot;Inspección de rutina. Estamos atrasados. ¿No puede ir un poco más rápido esta carcacha?&quot;" tags="Juego" position="475,475" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Jibo%20en%20el%20puente.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Jibo: &quot;¡Vamos, viejo gruñón! Después de toparnos con la tormenta de asteroides hemos tenido suerte de no sufrir daños. Si hubiera sido así, tendrías que armarte de mucha paciencia antes de poder disfrutar del hermoso sol hirziano.&quot;
+
+[[&quot;¡Eh! ¡Más respeto a su capitán! Habrá que avisarle al gobernador Maimal, antes de que se ponga impaciente.&quot;|&quot;Habrá que avisarle al gobernador Maimal.&quot;]]
+[[&quot;Bueno, bueno. Solo mantenme al tanto de como van las cosas.&quot;|&quot;Bueno. Mantenme al tanto.&quot;]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="16" name="&quot;Habrá que avisarle al gobernador Maimal.&quot;" tags="Juego" position="400,900" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Jibo%20en%20el%20puente.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Jibo: &quot;De acuerdo, yo lo llamo.&quot; (set: $cap1_visito_puente to true)
+
+[[Ir a la enfermería]]
+[[Ir al laboratorio científico]]
+[[Ir a la sala de esparcimiento]]
+[[Ir al camarote]]
+[[Recorrer los pasillos]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="17" name="&quot;Bueno. Mantenme al tanto.&quot;" tags="Juego" position="200,900" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Jibo%20en%20el%20puente.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Jibo asiente con la cabeza. (set: $cap1_visito_puente to true)
+
+[[Ir a la enfermería]]
+[[Ir al laboratorio científico]]
+[[Ir a la sala de esparcimiento]]
+[[Ir al camarote]]
+[[Recorrer los pasillos]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="18" name="Ir al camarote" tags="" position="400,1075" size="100,100"></tw-passagedata><tw-passagedata pid="19" name="salir del puente" tags="Juego" position="575,875" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Jibo%20en%20el%20puente.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+(set: $cap1_visito_puente to true)
+
+[[Ir a la enfermería]]
+[[Ir al laboratorio científico]]
+[[Ir a la sala de esparcimiento]]
+[[Ir al camarote]]
+[[Recorrer los pasillos]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="20" name="en la enfermería" tags="Juego" position="675,500" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Doctora%20Bruz%20en%20la%20enfermería.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+(if:($cap1_visito_enferm))[
+Doctora Bruz: &quot;¿Sí, capitán, olvidó algo?&quot;
+
+[[&quot;Mmm... No. ¿Supongo que tiene los mismos enfermos que hace un rato, no?&quot;|charla con la doctora]]
+
+](else: )[
+Doctora Bruz: &quot;Buenos días, capitán. ¿Qué necesita?&quot;
+
+[[&quot;Nada en particular, doctora. Solo recorría la nave.&quot;|charla con la doctora]]
+[[&quot;Solo quería saber si todo estaba en orden.&quot;|charla con la doctora]]
+
+]
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="21" name="en el puente" tags="Juego" position="175,550" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;Jibo%20en%20el%20puente.jpg&quot; width=100%&gt;
 &lt;/div&gt;
@@ -176,68 +358,14 @@ Jibo: &quot;Hola, Del. ¿Tenías ganas de ver el espacio?&quot;
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="14" name="&quot;Sí, no tengo una gran vista desde mi camarote. ¿Todo en orden?&quot;" tags="Juego" position="175,700" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="22" name="salir de la enfermería" tags="Juego" position="725,900" size="100,100">&lt;/style&gt;
 &lt;img
-src=&quot;Jibo%20en%20el%20puente.jpg&quot; width=100%&gt;
+src=&quot;Doctora%20Bruz%20en%20la%20enfermería.jpg&quot; width=100%&gt;
 &lt;/div&gt;
 
-Jibo: &quot;Sí. Nos atrasamos un poco por lo de la tormenta de asteroides, pero eso es todo.&quot;
+(set: $cap1_visito_enferm to true)
 
-[[&quot;Habrá que avisarle al gobernador Maimal.&quot;]]
-[[&quot;Bueno. Mantenme al tanto.&quot;]]
-
-{(link:&quot;Guardar partida&quot;)[
-  (if:(save-game:&quot;Slot 1&quot;))[
-    
-    Partida guardada
-  ](else: )[
-    Error: La partida no se ha guardado
-  ]
-]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="15" name="&quot;Hace tres meses que no veo otra cosa más que el espacio. Quiero un poco de tierra firme bajo mis pies.&quot;" tags="Juego" position="400,700" size="100,100">&lt;/style&gt;
-&lt;img
-src=&quot;Jibo%20en%20el%20puente.jpg&quot; width=100%&gt;
-&lt;/div&gt;
-
-Jibo: &quot;Ánimo. Pronto estarás en Hirz. Nos atrasamos con la bendita tormenta de asteroides, pero llegaremos. Quizás tardemos un par de días más, pero eso es todo, no te preocupes.&quot;
-
-[[&quot;Habrá que avisarle al gobernador Maimal.&quot;]]
-[[&quot;Bueno. Mantenme al tanto.&quot;]]
-
-{(link:&quot;Guardar partida&quot;)[
-  (if:(save-game:&quot;Slot 1&quot;))[
-    
-    Partida guardada
-  ](else: )[
-    Error: La partida no se ha guardado
-  ]
-]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="16" name="&quot;Inspección de rutina. Estamos atrasados. ¿No puede ir un poco más rápido esta carcacha?&quot;" tags="Juego" position="625,625" size="100,100">&lt;/style&gt;
-&lt;img
-src=&quot;Jibo%20en%20el%20puente.jpg&quot; width=100%&gt;
-&lt;/div&gt;
-
-Jibo: &quot;¡Vamos, viejo gruñón! Después de toparnos con la tormenta de asteroides hemos tenido suerte de no sufrir daños. Si hubiera sido así, tendrías que armarte de mucha paciencia antes de poder disfrutar del hermoso sol hirziano.&quot;
-
-[[&quot;¡Eh! ¡Más respeto a su capitán! Habrá que avisarle al gobernador Maimal, antes de que se ponga impaciente.&quot;|&quot;Habrá que avisarle al gobernador Maimal.&quot;]]
-[[&quot;Bueno, bueno. Solo mantenme al tanto de como van las cosas.&quot;|&quot;Bueno. Mantenme al tanto.&quot;]]
-
-{(link:&quot;Guardar partida&quot;)[
-  (if:(save-game:&quot;Slot 1&quot;))[
-    
-    Partida guardada
-  ](else: )[
-    Error: La partida no se ha guardado
-  ]
-]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="17" name="&quot;Habrá que avisarle al gobernador Maimal.&quot;" tags="Juego" position="500,875" size="100,100">&lt;/style&gt;
-&lt;img
-src=&quot;Jibo%20en%20el%20puente.jpg&quot; width=100%&gt;
-&lt;/div&gt;
-
-Jibo: &quot;De acuerdo, yo lo llamo.&quot; (set: $cap1_visito_puente to true)
-
-[[Ir a la enfermería]]
+[[Ir al puente de mando]]
 [[Ir al laboratorio científico]]
 [[Ir a la sala de esparcimiento]]
 [[Ir al camarote]]
@@ -251,18 +379,64 @@ Jibo: &quot;De acuerdo, yo lo llamo.&quot; (set: $cap1_visito_puente to true)
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="18" name="&quot;Bueno. Mantenme al tanto.&quot;" tags="Juego" position="275,900" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="23" name="charla con la doctora" tags="Juego" position="650,650" size="100,100">&lt;/style&gt;
 &lt;img
-src=&quot;Jibo%20en%20el%20puente.jpg&quot; width=100%&gt;
+src=&quot;Doctora%20Bruz%20en%20la%20enfermería.jpg&quot; width=100%&gt;
 &lt;/div&gt;
 
-Jibo asiente con la cabeza. (set: $cap1_visito_puente to true)
+(if:($cap1_visito_enferm))[
+Doctora Bruz: &quot;Sí, capitán, son los mismos.&quot;
 
-[[Ir a la enfermería]]
-[[Ir al laboratorio científico]]
-[[Ir a la sala de esparcimiento]]
-[[Ir al camarote]]
-[[Recorrer los pasillos]]
+[[&quot;La dejo, entonces.&quot;|salir de la enfermería]]
+
+](else: )[
+Doctora Bruz: &quot;Todo en orden por aquí, capitán. Salvo el alférez Chaio Ariz que tiene una  apendicitis,  y algunas otras cosas menores, todos están bien.&quot;
+
+[[&quot;Bien, me alegro.&quot;|salir de la enfermería]]
+
+]
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="24" name="en el laboratorio" tags="Juego" position="850,500" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Profesor%20Erlaras%20en%20el%20laboratorio.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+(if:($cap1_visito_lab))[
+Profesor Erlaras: &quot;Hola de nuevo, capitán.&quot;
+
+[[&quot;Ah, hola. ¿Ya estuve por aquí hace un momento, verdad?&quot;]]
+
+](else: )[
+Profesor Erlaras: &quot;Hola, capitán. ¿Cómo está?&quot;
+
+[[&quot;Bien, profesor. Un poco aburrido, Son todos tan eficientes en esta nave que creo que no me necesitan.&quot;]]
+[[&quot;Muy bien, profesor. Gracias. Dígame, ha descubierto algo de interés en estos días.&quot;]]
+[[Bien, gracias, profesor. ¿Y usted?]]
+
+]
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="25" name="&quot;Ah, hola. ¿Ya estuve por aquí hace un momento, verdad?&quot;" tags="Juego" position="800,625" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Profesor%20Erlaras%20en%20el%20laboratorio.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Profesor Erlaras: &quot;Sí, capitán. Muchacho, me parece que tendría que tomarse un descanso.&quot;
+
+[[&quot;Quizás sea una buena idea, profesor.&quot;|salir del laboratorio]]
 
 {(link:&quot;Guardar partida&quot;)[
   (if:(save-game:&quot;Slot 1&quot;))[
@@ -272,15 +446,66 @@ Jibo asiente con la cabeza. (set: $cap1_visito_puente to true)
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="19" name="Ir al camarote" tags="" position="350,1050" size="100,100"></tw-passagedata><tw-passagedata pid="20" name="salir del puente" tags="Juego" position="675,850" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="26" name="&quot;Bien, profesor. Un poco aburrido, Son todos tan eficientes en esta nave que creo que no me necesitan.&quot;" tags="Juego" position="1075,650" size="100,100">&lt;/style&gt;
 &lt;img
-src=&quot;Jibo%20en%20el%20puente.jpg&quot; width=100%&gt;
+src=&quot;Profesor%20Erlaras%20en%20el%20laboratorio.jpg&quot; width=100%&gt;
 &lt;/div&gt;
 
-(set: $cap1_visito_puente to true)
+Profesor Erlaras: &quot;Dígamelo a mí. Llevo tres meses prácticamente sin hacer nada. No tenemos más información sobre el planeta ése al que vamos que el hecho de que tiene aire y una gravedad aceptable. Hasta que no esté ahí, yo no tengo nada que hacer. Es muy frustrante.&quot;
 
+[[&quot;Bueno, profesor. ¡Qué se le va a hacer! Es la vida que elegimos.&quot;|salir del laboratorio]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="27" name="&quot;Muy bien, profesor. Gracias. Dígame, ha descubierto algo de interés en estos días.&quot;" tags="Juego" position="925,625" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Profesor%20Erlaras%20en%20el%20laboratorio.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Profesor Erlaras: &quot;¿Qué voy a descubrir? ¿Que en una nave espacial no hay ratas ni cucarachas? No tenemos más información sobre el planeta ése al que vamos que el hecho de que tiene aire y una gravedad aceptable. Hasta que no esté ahí, no tengo nada que hacer. Es muy frustrante.&quot;
+
+[[&quot;Calma, profesor, ya tendrá para divertirse en Kerranius.&quot;|salir del laboratorio]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="28" name="Bien, gracias, profesor. ¿Y usted?" tags="Juego" position="950,775" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Profesor%20Erlaras%20en%20el%20laboratorio.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Profesor Erlaras: &quot;Bien, algo aburrido. Llevo tres meses prácticamente sin hacer nada. No tenemos más información sobre el planeta ése al que vamos que el hecho de que tiene aire y una gravedad aceptable. Hasta que no esté ahí, yo no tengo nada que hacer. Es muy frustrante.&quot;
+
+[[&quot;Bueno, profesor. ¡Qué se le va a hacer! Es la vida que elegimos.&quot;|salir del laboratorio]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="29" name="salir del laboratorio" tags="Juego" position="850,875" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Profesor%20Erlaras%20en%20el%20laboratorio.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+(set: $cap1_visito_lab to true)
+
+[[Ir al puente de mando]]
 [[Ir a la enfermería]]
-[[Ir al laboratorio científico]]
 [[Ir a la sala de esparcimiento]]
 [[Ir al camarote]]
 [[Recorrer los pasillos]]
