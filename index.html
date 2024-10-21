@@ -131,7 +131,7 @@ CAPITULO I
 (set: $cap1_visito_enferm to false)
 (set: $cap1_visito_lab to false)
 (set: $cap1_visito_sala_e to false)
-(set: $cap1_recorro_pasillos to false)
+(set: $cap1_llama_gob to false)
 (set: $cap1_likita_aviso to false)</tw-passagedata><tw-passagedata pid="8" name="Ir al puente de mando" tags="Juego" position="225,375" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;Jibo%20en%20el%20puente.jpg&quot; width=100%&gt;
@@ -212,7 +212,28 @@ La sala de esparcimiento. Un lugar que nada tiene que ver con el resto de la nav
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="12" name="Recorrer los pasillos" tags="" position="1325,425" size="100,100"></tw-passagedata><tw-passagedata pid="13" name="&quot;Sí, no tengo una gran vista desde mi camarote. ¿Todo en orden?&quot;" tags="Juego" position="175,700" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="12" name="Recorrer los pasillos" tags="Juego" position="1325,425" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Delex%20en%20el%20pasillo.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Nada especial. Solo gente que viene y va.
+
+[[Ir al puente de mando]]
+[[Ir a la enfermería]]
+[[Ir al laboratorio científico]]
+[[Ir a la sala de esparcimiento]]
+[[Ir al camarote]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="13" name="&quot;Sí, no tengo una gran vista desde mi camarote. ¿Todo en orden?&quot;" tags="Juego" position="175,700" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;Jibo%20en%20el%20puente.jpg&quot; width=100%&gt;
 &lt;/div&gt;
@@ -272,7 +293,7 @@ src=&quot;Jibo%20en%20el%20puente.jpg&quot; width=100%&gt;
 &lt;/div&gt;
 
 Jibo: &quot;De acuerdo, yo lo llamo.&quot; (set: $cap1_visito_puente to true)
-
+(set: $cap1_avisa_gob to true)
 [[Ir a la enfermería]]
 [[Ir al laboratorio científico]]
 [[Ir a la sala de esparcimiento]]
@@ -308,7 +329,25 @@ Jibo asiente con la cabeza. (set: $cap1_visito_puente to true)
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="18" name="Ir al camarote" tags="" position="400,1075" size="100,100"></tw-passagedata><tw-passagedata pid="19" name="salir del puente" tags="Juego" position="575,875" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="18" name="Ir al camarote" tags="Juego" position="400,1075" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Delex%20en%20su%20camarote.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Mi comunicador está sonando. Es el gobernador Maimal.
+
+[[Atenderlo|atiende comunicador]]
+[[Ignorarlo|ignora comunicador]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="19" name="salir del puente" tags="Juego" position="575,875" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;Jibo%20en%20el%20puente.jpg&quot; width=100%&gt;
 &lt;/div&gt;
@@ -635,6 +674,23 @@ src=&quot;Likita%20en%20la%20sala%20de%20esparcimiento.jpg&quot; width=100%&gt;
 Likita: &quot;¡Espere, capitán! Me dicen que lo están buscando, que tiene una llamada en su camarote.&quot;
 (set: $cap1_likita_aviso to true)
 [[&quot;¡Oh! ¡Gracias, Likita! ¡Creo que dejé olvidado mi comunicador!&quot;|salir de la sala de esparcimiento]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="35" name="atiende comunicador" tags="" position="400,1200" size="100,100"></tw-passagedata><tw-passagedata pid="36" name="ignora comunicador" tags="" position="525,1200" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Delex%20en%20su%20camarote.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+El comunicador no para de sonar. Tendrás que atenderlo.
+
+[[Atender el comunicador|atiende comunicador]]
 
 {(link:&quot;Guardar partida&quot;)[
   (if:(save-game:&quot;Slot 1&quot;))[
