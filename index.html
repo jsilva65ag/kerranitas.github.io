@@ -293,7 +293,7 @@ src=&quot;Jibo%20en%20el%20puente.jpg&quot; width=100%&gt;
 &lt;/div&gt;
 
 Jibo: &quot;De acuerdo, yo lo llamo.&quot; (set: $cap1_visito_puente to true)
-(set: $cap1_avisa_gob to true)
+(set: $cap1_llama_gob to true)
 [[Ir a la enfermería]]
 [[Ir al laboratorio científico]]
 [[Ir a la sala de esparcimiento]]
@@ -329,7 +329,7 @@ Jibo asiente con la cabeza. (set: $cap1_visito_puente to true)
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="18" name="Ir al camarote" tags="Juego" position="400,1075" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="18" name="Ir al camarote" tags="Juego" position="325,1025" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;Delex%20en%20su%20camarote.jpg&quot; width=100%&gt;
 &lt;/div&gt;
@@ -670,7 +670,6 @@ src=&quot;Likita%20en%20la%20sala%20de%20esparcimiento.jpg&quot; width=100%&gt;
 &lt;img
 src=&quot;Likita%20en%20la%20sala%20de%20esparcimiento.jpg&quot; width=100%&gt;
 &lt;/div&gt;
-
 Likita: &quot;¡Espere, capitán! Me dicen que lo están buscando, que tiene una llamada en su camarote.&quot;
 (set: $cap1_likita_aviso to true)
 [[&quot;¡Oh! ¡Gracias, Likita! ¡Creo que dejé olvidado mi comunicador!&quot;|salir de la sala de esparcimiento]]
@@ -683,7 +682,31 @@ Likita: &quot;¡Espere, capitán! Me dicen que lo están buscando, que tiene una
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="35" name="atiende comunicador" tags="" position="400,1200" size="100,100"></tw-passagedata><tw-passagedata pid="36" name="ignora comunicador" tags="" position="525,1200" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="35" name="atiende comunicador" tags="Juego" position="500,1025" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Delex%20en%20su%20camarote.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+(if:($cap1_llama_gob))[
+Gobernador Maimal: &quot;¿Cómo está, capitán? Me llamó su primer oficial. Me dijo que no llegarán según lo previsto.&quot;
+
+[[&quot;Así es, gobernador. Lamentablemente nos encontramos con una tormenta de asteroides y tuvimos que avanzar con mucha cautela durante tres días.&quot;|charla con gobernador]]
+
+](else: )[
+Gobernador Maimal: &quot;Capitán, ¿Qué sucede? Nuestros sensores no detectan su nave todavía. ¿Dónde está?&quot;
+
+[[&quot;Estamos retrasados, gobernador.  Lamentablemente nos encontramos con una tormenta de asteroides y tuvimos que avanzar con mucha cautela durante tres días.&quot;|charla con gobernador]]
+
+]
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="36" name="ignora comunicador" tags="Juego" position="225,1150" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;Delex%20en%20su%20camarote.jpg&quot; width=100%&gt;
 &lt;/div&gt;
@@ -700,7 +723,66 @@ El comunicador no para de sonar. Tendrás que atenderlo.
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata></tw-storydata>
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="37" name="charla con gobernador" tags="Juego" position="400,1150" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Delex%20en%20su%20camarote.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Gobernador Maimal: &quot;¡Uf! ¡Qué fastidio! Bueno, supongo que no se puede hacer nada. Mantengame al tanto, por favor.&quot;
+
+[[&quot;Sí, gobernador. Descuide. Nos veremos en unos días.&quot;|charla con Jibo]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="38" name="charla con Jibo" tags="Juego" position="250,1300" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Jibo%20en%20el%20camarote%20de%20Delex.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Jibo: &quot;¿Molesto?&quot;
+
+[[&quot;La verdad que sí, pero, ¿tengo alternativa?&quot;]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="39" name="&quot;La verdad que sí, pero, ¿tengo alternativa?&quot;" tags="Juego" position="400,1300" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Jibo%20en%20el%20camarote%20de%20Delex.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+(if:($cap1_llama_gob))[
+Jibo: &quot;¡Qué chistoso! A propósito, hablé con el gobernador. No parecía estar muy contento con nuestro retraso.&quot;
+
+[[&quot;Para nada. Pero tienes que entender, no es solo la preparación para recibirnos. Es la ansiedad de las familias que se disponían a viajar.&quot;|charla con Jibo 2]]
+
+](else: )[
+Jibo: &quot;¿Pasó algo?.&quot;
+
+[[&quot;Me llamó el gobernador. No está para  nada contento con nuestro retraso. Pero hay que entenderlo, no es solo la preparación para recibirnos. Es la ansiedad de las familias que se disponían a viajar.&quot;|charla con Jibo 2]]
+
+]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="40" name="charla con Jibo 2" tags="" position="400,1425" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
