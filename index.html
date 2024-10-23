@@ -799,7 +799,7 @@ Jido: &quot;Supongo que también está la cuestión de los comerciantes, que nos
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="41" name="&quot;Seguro. Somos como Papá Noel para ellos. Creo que ni habíamos despegado y ya tenían las vidrieras llenas de recuerdos de Dayman&quot;" tags="" position="500,1400" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="41" name="&quot;Seguro. Somos como Papá Noel para ellos. Creo que ni habíamos despegado y ya tenían las vidrieras llenas de recuerdos de Dayman&quot;" tags="Juego" position="500,1400" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;Jibo%20en%20el%20camarote%20de%20Delex.jpg&quot; width=100%&gt;
 &lt;/div&gt;
@@ -874,7 +874,7 @@ src=&quot;Jibo%20en%20el%20camarote%20de%20Delex.jpg&quot; width=100%&gt;
 &lt;/div&gt;
 
 Jido: &quot;Como quieras. Hasta luego.&quot;
-
+(set: $cap1_alergia to 0)
 [[Le saludas con un gesto.]]
 
 {(link:&quot;Guardar partida&quot;)[
@@ -885,7 +885,24 @@ Jido: &quot;Como quieras. Hasta luego.&quot;
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="46" name="Le saludas con un gesto." tags="" position="750,1550" size="100,100"></tw-passagedata><tw-passagedata pid="47" name="&quot;No sé. ¿Qué tienes para ofrecernos, Likita?&quot;" tags="Juego" position="375,1625" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="46" name="Le saludas con un gesto." tags="Juego" position="750,1550" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Delex%20en%20su%20camarote.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Llamas y pides un sandwich corilano. Siempre te gustó.
+(set: $cap1_alergia to 0)
+[[Continuar|Capítulo 2]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="47" name="&quot;No sé. ¿Qué tienes para ofrecernos, Likita?&quot;" tags="Juego" position="375,1625" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;Likita%20en%20la%20sala%20de%20esparcimiento.jpg&quot; width=100%&gt;
 &lt;/div&gt;
@@ -926,7 +943,7 @@ src=&quot;Delex%20y%20Jibo%20en%20la%20sala%20de%20esparcimiento.jpg&quot; width
 &lt;/div&gt;
 
 Los guisados están muy sabrosos. Jido y tú conversan relajadamente mientras comen.&quot;
-(set: $cap1_guisado to true)
+(set: $cap1_alergia to (random:1,4))
 [[Continuar|luego de comer]]
 
 {(link:&quot;Guardar partida&quot;)[
@@ -937,14 +954,15 @@ Los guisados están muy sabrosos. Jido y tú conversan relajadamente mientras co
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="50" name="&quot;Mmm... creo que yo prefiero la tortilla.&quot;" tags="Juego" position="750,1725" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="50" name="&quot;Mmm... creo que yo prefiero la tortilla.&quot;" tags="Juego" position="725,1750" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;Delex%20y%20Jibo%20en%20la%20sala%20de%20esparcimiento.jpg&quot; width=100%&gt;
 &lt;/div&gt;
 
 Tu tortilla no está del todo mal, aunque piensas que la próxima pedirás el guisado. Jido y tú conversan relajadamente mientras comen.&quot;
-(set: $cap1_guisado to false)
-[[Continuar|luego de comer]]
+(set: $cap1_alergia to 0)
+
+[[Continuar|Capítulo 2]]
 
 {(link:&quot;Guardar partida&quot;)[
   (if:(save-game:&quot;Slot 1&quot;))[
@@ -954,7 +972,94 @@ Tu tortilla no está del todo mal, aunque piensas que la próxima pedirás el gu
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="51" name="luego de comer" tags="" position="550,1775" size="100,100"></tw-passagedata></tw-storydata>
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="51" name="luego de comer" tags="Juego" position="475,1775" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Jibo%20en%20la%20sala%20de%20esparcimiento.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Jibo: &quot;No estuvo mal, ¿verdad?&quot;
+
+[[&quot;Para nada. Bueno, Nos vemos más tarde. Buen provecho]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="52" name="Capítulo 2" tags="" position="875,1675" size="100,100"></tw-passagedata><tw-passagedata pid="53" name="&quot;Para nada. Bueno, Nos vemos más tarde. Buen provecho" tags="Juego" position="400,1900" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Delex%20en%20su%20camarote.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Te levantas temprano al día siguiente, como siempre.
+Pero más temprano de lo habitual. No te estás sintiendo bien. Estás seguro de que tienes fiebre y, al levantarte de la cama, comprendes que estás mareado. Te pones el uniforme con no poca dificultad.
+
+[[Ir a la enfermería|capitán enfermo]]
+[[Ignorar el malestar y ocuparte de tus obligaciones]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="54" name="Ignorar el malestar y ocuparte de tus obligaciones" tags="" position="550,2025" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Delex%20en%20el%20pasillo.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Te cuesta mucho ocuparte de las cosas. Te sientes cada vez más mareado y más afiebrado. Además, ha aparecido un zumbido en los oídos y la vista se te nubla por momentos.
+
+[[Ir a tu camarote a descansar]]
+[[Ir a la enfermería|capitán muy enfermo]]
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="55" name="capitán enfermo" tags="Juego" position="250,2000" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Doctora%20Bruz%20en%20la%20enfermería.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Doctora Bruz: &quot;Buenos días, capitán. ¿Qué sucede?
+
+[[No me siento bien, doctora. Creo que estoy enfermo.]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="56" name="No me siento bien, doctora. Creo que estoy enfermo." tags="" position="275,2150" size="100,100"></tw-passagedata><tw-passagedata pid="57" name="Ir a tu camarote a descansar" tags="" position="625,2150" size="100,100"></tw-passagedata><tw-passagedata pid="58" name="capitán muy enfermo" tags="Juego" position="475,2150" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Doctora%20Bruz%20en%20la%20enfermería.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Doctora Bruz: &quot;Buenos días, capitán. ¿Qué sucede?
+
+[[No me siento bien, doctora. Creo que estoy enfermo.|capitán muy enfermo 2]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="59" name="capitán muy enfermo 2" tags="" position="475,2275" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
