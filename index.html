@@ -992,11 +992,49 @@ Jibo: &quot;No estuvo mal, ¿verdad?&quot;
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="52" name="Capítulo 2" tags="" position="100,2625" size="100,100">CAPITULO 2
-EN PREPARACIÓN
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="52" name="Capítulo 2" tags="" position="125,2550" size="100,100">(if: ($cap1_alergia is &gt;=3))[
+&lt;/style&gt;
+&lt;img
+src=&quot;Doctor%20en%20el%20hospital.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+CAPITULO II
+
+El aterrizaje en el planeta Hirz es, afortunadamente, suave. Jibo hace bien su trabajo. Te trasladan al hospital de la colonia. El doctor Yaab Rkimell se hace cargo de tu caso.
+
+[[Continuar|en el hospital]]
+
+]
+(if: ($cap1_alergia is &lt;3))[
+&lt;/style&gt;
+&lt;img
+src=&quot;Maimal%20en%20su%20oficina.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+CAPITULO II
+
+Llegan al planeta sin más contratiempos. Inmediatamente Jibo y tú se presentan en la oficina del gobernador Jerombar Maimal.
+
+[[Continuar|con el gobernador]]
+
+]
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] 
 
 
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="53" name="luego de comer guisado" tags="Juego" position="375,1875" size="100,100">&lt;/style&gt;
+(set: $cap1_visito_puente to false)
+(set: $cap1_visito_enferm to false)
+(set: $cap1_visito_lab to false)
+(set: $cap1_visito_sala_e to false)
+(set: $cap1_llama_gob to false)
+(set: $cap1_likita_aviso to false)</tw-passagedata><tw-passagedata pid="53" name="luego de comer guisado" tags="Juego" position="375,1875" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;Delex%20en%20su%20camarote.jpg&quot; width=100%&gt;
 &lt;/div&gt;
@@ -1110,6 +1148,7 @@ src=&quot;Doctora%20Bruz%20en%20la%20enfermería.jpg&quot; width=100%&gt;
 
 Doctora Bruz: &quot;Qué curioso. Porque tiene todos los síntomas de una reacción alérgica a alguno de esos alimentos. Quizás lo comió como parte de una receta sin saberlo. Le daré un antiestamínico de acción general, y esperemos que haga efecto.&quot;
 (set: $cap1_alergia to $cap1_alergia+1)
+
 [[Continuar|perspectiva ante alergia]]
 
 {(link:&quot;Guardar partida&quot;)[
@@ -1169,7 +1208,7 @@ Doctora Bruz: &quot;Deberá permancer internado hasta que lleguemos. Luego le tr
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="62" name="reposo" tags="Juego" position="100,2475" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="62" name="reposo" tags="Juego" position="75,2400" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;Delex%20en%20su%20camarote.jpg&quot; width=100%&gt;
 &lt;/div&gt;
@@ -1186,7 +1225,7 @@ Pudo ser peor. No pasaste el mejor de los días, pero al siguiente estás repues
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="63" name="internado leve" tags="Juego" position="575,2425" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="63" name="internado leve" tags="Juego" position="675,2325" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;Delex%20en%20la%20enfermería.jpg&quot; width=100%&gt;
 &lt;/div&gt;
@@ -1203,7 +1242,7 @@ No son los mejores días de tu vida y no te sientes muy feliz de pasar los últi
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="64" name="internado grave" tags="Juego" position="1000,2375" size="100,100">(if: ($cap1_alergia is 5))[
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="64" name="internado grave" tags="Juego" position="900,2300" size="100,100">(if: ($cap1_alergia is &gt;=5))[
 &lt;/style&gt;
 &lt;img
 src=&quot;Enfermería.jpg&quot; width=100%&gt;
@@ -1233,7 +1272,7 @@ No la pasas muy bien esos días. Los recursos de la enfermería de la nave son l
 ]}
 
 ]
-[[Volver al Menú Principal|Menú]] </tw-passagedata></tw-storydata>
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="65" name="en el hospital" tags="" position="125,2675" size="100,100"></tw-passagedata><tw-passagedata pid="66" name="con el gobernador" tags="" position="250,2675" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
