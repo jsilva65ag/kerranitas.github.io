@@ -961,7 +961,6 @@ src=&quot;Delex%20y%20Jibo%20en%20la%20sala%20de%20esparcimiento.jpg&quot; width
 
 Tu tortilla no está del todo mal, aunque piensas que la próxima pedirás el guisado. Jido y tú conversan relajadamente mientras comen.&quot;
 (set: $cap1_alergia to 0)
-
 [[Continuar|luego de comer]]
 
 {(link:&quot;Guardar partida&quot;)[
@@ -978,10 +977,12 @@ src=&quot;Jibo%20en%20la%20sala%20de%20esparcimiento.jpg&quot; width=100%&gt;
 &lt;/div&gt;
 
 Jibo: &quot;No estuvo mal, ¿verdad?&quot;
-(if: ($cap1_intoxicado:0))[
-[[&quot;Para nada. Bueno, Nos vemos más tarde. Buen provecho|luego de comer guisado]]
-](else:)[
+(if: ($cap1_alergia is 0))[
 [[&quot;Para nada. Bueno, Nos vemos más tarde. Buen provecho|Capítulo 2]]
+
+](else:)[
+[[&quot;Para nada. Bueno, Nos vemos más tarde. Buen provecho|luego de comer guisado]]
+
 ]
 {(link:&quot;Guardar partida&quot;)[
   (if:(save-game:&quot;Slot 1&quot;))[
@@ -991,7 +992,11 @@ Jibo: &quot;No estuvo mal, ¿verdad?&quot;
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="52" name="Capítulo 2" tags="" position="875,1675" size="100,100"></tw-passagedata><tw-passagedata pid="53" name="luego de comer guisado" tags="Juego" position="375,1875" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="52" name="Capítulo 2" tags="" position="100,2625" size="100,100">CAPITULO 2
+EN PREPARACIÓN
+
+
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="53" name="luego de comer guisado" tags="Juego" position="375,1875" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;Delex%20en%20su%20camarote.jpg&quot; width=100%&gt;
 &lt;/div&gt;
@@ -1183,7 +1188,7 @@ Pudo ser peor. No pasaste el mejor de los días, pero al siguiente estás repues
 ]}
 [[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="63" name="internado leve" tags="Juego" position="575,2425" size="100,100">&lt;/style&gt;
 &lt;img
-src=&quot;Delex%20Bruz%20en%20la%20enfermería.jpg&quot; width=100%&gt;
+src=&quot;Delex%20en%20la%20enfermería.jpg&quot; width=100%&gt;
 &lt;/div&gt;
 
 No son los mejores días de tu vida y no te sientes muy feliz de pasar los últimos días del viaje encerrado en la enfermería, pero finalmente mejoras.
@@ -1215,10 +1220,6 @@ src=&quot;Delex%20Bruz%20en%20la%20enfermería.jpg&quot; width=100%&gt;
 &lt;/div&gt;
 No la pasas muy bien esos días. Los recursos de la enfermería de la nave son limitados y, aunque no empeoras, tampoco mejoras mucho. Esperas que en la colonia puedan hacer que te recuperes y puedas continuar con tu misión.
 
-[[Continuar|Capítulo 2]]
-
-]
-
 (set: $cap1_alergia to 0)
 [[Continuar|Capítulo 2]]
 
@@ -1230,6 +1231,8 @@ No la pasas muy bien esos días. Los recursos de la enfermería de la nave son l
     Error: La partida no se ha guardado
   ]
 ]}
+
+]
 [[Volver al Menú Principal|Menú]] </tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
