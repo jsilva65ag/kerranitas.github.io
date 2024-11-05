@@ -992,7 +992,7 @@ Jibo: &quot;No estuvo mal, ¿verdad?&quot;
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="52" name="Capítulo 2" tags="" position="125,2550" size="100,100">(if: ($cap1_alergia is &gt;=3))[
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="52" name="Capítulo 2" tags="Juego" position="125,2550" size="100,100">(if: ($cap1_alergia is &gt;=3))[
 &lt;/style&gt;
 &lt;img
 src=&quot;Doctor%20en%20el%20hospital.jpg&quot; width=100%&gt;
@@ -1255,11 +1255,10 @@ Lamentablemente, los medios de que dispone la nave no son suficientes. Pese a lo
  ](else: )[
  &lt;/style&gt;
 &lt;img
-src=&quot;Delex%20Bruz%20en%20la%20enfermería.jpg&quot; width=100%&gt;
+src=&quot;Delex%20en%20la%20enfermería.jpg&quot; width=100%&gt;
 &lt;/div&gt;
 No la pasas muy bien esos días. Los recursos de la enfermería de la nave son limitados y, aunque no empeoras, tampoco mejoras mucho. Esperas que en la colonia puedan hacer que te recuperes y puedas continuar con tu misión.
 
-(set: $cap1_alergia to 0)
 [[Continuar|Capítulo 2]]
 
 {(link:&quot;Guardar partida&quot;)[
