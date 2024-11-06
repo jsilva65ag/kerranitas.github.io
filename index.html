@@ -439,7 +439,7 @@ src=&quot;Doctora%20Bruz%20en%20la%20enfermería.jpg&quot; width=100%&gt;
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="23" name="charla con la doctora" tags="Juego" position="650,650" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="23" name="charla con la doctora" tags="Juego" position="600,650" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;Doctora%20Bruz%20en%20la%20enfermería.jpg&quot; width=100%&gt;
 &lt;/div&gt;
@@ -489,7 +489,7 @@ Profesor Erlaras: &quot;Hola, capitán. ¿Cómo está?&quot;
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="25" name="&quot;Ah, hola. ¿Ya estuve por aquí hace un momento, verdad?&quot;" tags="Juego" position="775,650" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="25" name="&quot;Ah, hola. ¿Ya estuve por aquí hace un momento, verdad?&quot;" tags="Juego" position="750,675" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;Profesor%20Erlaras%20en%20el%20laboratorio.jpg&quot; width=100%&gt;
 &lt;/div&gt;
@@ -740,11 +740,14 @@ Gobernador Maimal: &quot;¡Uf! ¡Qué fastidio! Bueno, supongo que no se puede h
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="38" name="charla con Jibo" tags="Juego" position="250,1300" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="38" name="charla con Jibo" tags="Juego" position="225,1275" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;Jibo%20en%20el%20camarote%20de%20Delex.jpg&quot; width=100%&gt;
 &lt;/div&gt;
 
+(if:(not $cap1_visito_puente))[
+Llama a tu puerta Jibo Hyah, tu primer oficial. Son viejos amigos, Se conocieron en la Academia.
+]
 Jibo: &quot;¿Molesto?&quot;
 
 [[&quot;La verdad que sí, pero, ¿tengo alternativa?&quot;]]
@@ -757,7 +760,7 @@ Jibo: &quot;¿Molesto?&quot;
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="39" name="&quot;La verdad que sí, pero, ¿tengo alternativa?&quot;" tags="Juego" position="525,1200" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="39" name="&quot;La verdad que sí, pero, ¿tengo alternativa?&quot;" tags="Juego" position="550,1225" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;Jibo%20en%20el%20camarote%20de%20Delex.jpg&quot; width=100%&gt;
 &lt;/div&gt;
@@ -782,7 +785,7 @@ Jibo: &quot;¿Pasó algo?.&quot;
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="40" name="charla con Jibo 2" tags="Juego" position="350,1300" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="40" name="charla con Jibo 2" tags="Juego" position="725,1275" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;Jibo%20en%20el%20camarote%20de%20Delex.jpg&quot; width=100%&gt;
 &lt;/div&gt;
@@ -856,6 +859,10 @@ Jido: &quot;Espero que, por lo menos, la comida en la recepción sea buena. Y ha
 src=&quot;Likita%20en%20la%20sala%20de%20esparcimiento.jpg&quot; width=100%&gt;
 &lt;/div&gt;
 
+(if:(not $cap1_visito_sala_e))[
+Van a la sala de esparcimiento. Ese lugar oficia de bar, restaurante, sala de juegos y espectáculos. Es a donde todos van en sus horas libres, como ustedes dos ahora. Likita Ngioro está a cargo del lugar.
+
+]
 Likita: &quot;¿Qué van a servirse, caballeros?&quot;
 
 [[&quot;No sé. ¿Qué tienes para ofrecernos, Likita?&quot;]]
@@ -1075,9 +1082,15 @@ Te cuesta mucho ocuparte de las cosas. Te sientes cada vez más mareado y más a
 src=&quot;Doctora%20Bruz%20en%20la%20enfermería.jpg&quot; width=100%&gt;
 &lt;/div&gt;
 
+(if:($cap1_visito_enferm))[
+Doctora Bruz: &quot;Buenos días, capitán. ¿Qué sucede?
+](else:)[
+En la enfermería te encuentras con la doctora Yeoli Bruz. Es la médica de a bordo. Es la primera vez que trabajas con ella. Según supiste antes de partir, tiene buenas referencias. Esperas que sea así.
+
 Doctora Bruz: &quot;Buenos días, capitán. ¿Qué sucede?
 
 [[No me siento bien, doctora. Creo que estoy enfermo.]]
+]
 
 {(link:&quot;Guardar partida&quot;)[
   (if:(save-game:&quot;Slot 1&quot;))[
@@ -1271,7 +1284,162 @@ No la pasas muy bien esos días. Los recursos de la enfermería de la nave son l
 ]}
 
 ]
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="65" name="en el hospital" tags="" position="125,2675" size="100,100"></tw-passagedata><tw-passagedata pid="66" name="con el gobernador" tags="" position="250,2675" size="100,100"></tw-passagedata></tw-storydata>
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="65" name="en el hospital" tags="Juego" position="75,2675" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Doctor%20en%20el%20hospital.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Doctor Rkimell: &quot;Capitán Bran, soy el doctor Rkimell. Lo tendremos en observación mientras evaluamos su caso.&quot;
+
+[[&quot;¿Cuánto tiempo, doctor? Debo partir en cinco días.]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="66" name="con el gobernador" tags="" position="675,2700" size="100,100"></tw-passagedata><tw-passagedata pid="67" name="&quot;¿Cuánto tiempo, doctor? Debo partir en cinco días." tags="Juego" position="225,2725" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Doctor%20en%20el%20hospital.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Doctor Rkimell: &quot;Lo veremos, capitán. Su salud es lo importante, ahora.&quot;
+
+[[&quot;¿Podría llamar a mi primer oficial? Necesito organizar las cosas.]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="68" name="&quot;¿Podría llamar a mi primer oficial? Necesito organizar las cosas." tags="Juego" position="350,2750" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Doctor%20en%20el%20hospital.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Doctor Rkimell: &quot;De acuerdo, capitán, pero debería descansar. Veré de contactar a su primer oficial, no se preocupe.&quot;
+
+[[&quot;Gracias, doctor.&quot;]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="69" name="&quot;Gracias, doctor.&quot;" tags="Juego" position="500,2800" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Jibo%20en%20el%20hospital.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Jibo: &quot;¡Demonios! ¡Te ves terrible!&quot;
+
+[[&quot;Gracias, Jibo, siempre viene bien una palabra de aliento.&quot;]]
+[[&quot;Y me siento peor. Maldita la hora que elegí el guisado.&quot;]]
+[[&quot;Creo que lo hiciste a propósito. Te pusiste de acuerdo con Likita para que comiera el guisado ese.&quot;]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="70" name="&quot;Gracias, Jibo, siempre viene bien una palabra de aliento.&quot;" tags="Juego" position="150,2900" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Jibo%20en%20el%20hospital.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Jibo: &quot;Lo que pasa es que te quieres quedar descansando y dejarme todo el trabajo a mí.&quot;
+
+[[&quot;No embromes. Solo espero recuperarme a tiempo para el viaje. ¿Has hablado con el gobernador?&quot;|Jibo hablo con Maimal]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="71" name="&quot;Creo que lo hiciste a propósito. Te pusiste de acuerdo con Likita para que comiera el guisado ese.&quot;" tags="Juego" position="475,3000" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Jibo%20en%20el%20hospital.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Jibo: &quot;Es que eres un debilucho. Yo también comí y estoy perfecto.&quot;
+
+[[&quot;¡Fue el ajo tircúreo! ¡Vaya momento para enterarme que soy alérgico! Pero bueno, lo hecho, hecho está. Solo espero recuperarme a tiempo para el viaje. ¿Has hablado con el gobernador?&quot;|Jibo hablo con Maimal]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="72" name="&quot;Y me siento peor. Maldita la hora que elegí el guisado.&quot;" tags="Juego" position="325,2925" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Jibo%20en%20el%20hospital.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Jibo: &quot;Es que eres un debilucho. Yo también comí y estoy perfecto.&quot;
+
+[[&quot;¡Vaya momento para enterarme que soy alérgico al ajo tircúreo! Pero bueno, lo hecho, hecho está. Solo espero recuperarme a tiempo para el viaje. ¿Has hablado con el gobernador?&quot;|Jibo hablo con Maimal]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="73" name="Jibo hablo con Maimal" tags="Juego" position="125,3125" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Jibo%20en%20el%20hospital.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Jibo: &quot;Sí, hablé con él. No está demasiado feliz con estos contratiempos. Pero le aseguré que la nave con los colonos saldrá a tiempo.&quot;
+
+[[&quot;Bien hecho, Jibo. Dile que lo iré a ver en cuanto pueda.&quot;]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="74" name="&quot;Bien hecho, Jibo. Dile que lo iré a ver en cuanto pueda.&quot;" tags="Juego" position="325,3100" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Jibo%20en%20el%20hospital.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Jibo: &quot;Creo que te caerá peor que el ajo tircúreo. En fin, te dejo. Descansa bien, Del.&quot;
+
+[[&quot;Nos veremos&quot;|Delex internado]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="75" name="Delex internado" tags="" position="275,3250" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
