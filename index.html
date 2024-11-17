@@ -1309,7 +1309,24 @@ Doctor Rkimell: &quot;Capitán Bran, soy el doctor Rkimell. Lo tendremos en obse
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="66" name="con el gobernador" tags="" position="700,3250" size="100,100">(set:$cap2_salud_Delex to 2)</tw-passagedata><tw-passagedata pid="67" name="&quot;¿Cuánto tiempo, doctor? Debo partir en cinco días." tags="Juego" position="225,2725" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="66" name="con el gobernador" tags="Juego" position="700,3250" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Maimal%20en%20su%20oficina.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+(set:$cap2_salud_Delex to 2)
+Gobernador Maimal: &quot;Capitán, oficial, bienvenidos a Dayman.&quot;
+
+[[Gracias, gobernador. Lamentamos el retraso, pero no se preocupe, partiremos a tiempo.]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="67" name="&quot;¿Cuánto tiempo, doctor? Debo partir en cinco días." tags="Juego" position="225,2725" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;Doctor%20en%20el%20hospital.jpg&quot; width=100%&gt;
 &lt;/div&gt;
@@ -1486,18 +1503,164 @@ Doctor Rkimell: &quot;Capitán, tengo buenas noticias. Mañana por la mañana le
   ]
 ]}
 ]
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="76" name="&quot;¡Doctor! ¡Debo continuar con mi misión!&quot;" tags="" position="175,3400" size="100,100"></tw-passagedata><tw-passagedata pid="77" name="&quot;¡Gracias, doctor! Temí que me dijera que no podía seguir.&quot;" tags="" position="525,3400" size="100,100"></tw-passagedata><tw-passagedata pid="78" name="Acerca de" tags="Acerca_de" position="900,25" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="76" name="&quot;¡Doctor! ¡Debo continuar con mi misión!&quot;" tags="Juego" position="175,3400" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Doctor%20en%20el%20hospital.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Doctor Rkimell: &quot;Lo lamento, capitán, pero, realmente, no está en condiciones.&quot;
+
+[[Te resignas y abandonas la misión.]]
+[[Desobedeces al doctor y decides, antes de que parta la nave, escaparte del hospital y continuar con la misión]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="77" name="&quot;¡Gracias, doctor! Temí que me dijera que no podía seguir.&quot;" tags="" position="525,3400" size="100,100"></tw-passagedata><tw-passagedata pid="78" name="Acerca de" tags="Acerca_de" position="900,25" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;kerranitas_acerca_de.jpg&quot; width=100%&gt;
 &lt;/div&gt;
 El legado de los kerranitas
 
-por FJ-GAMES
+por FJ-GAMES (2024)
 
 En este juego las decisiones que tomes llevarán la historia por caminos totalmente diferentes, incluyendo la finalización prematura del juego. Ten en cuenta que también existen eventos aleatorios, lo que implica que una misma decisión te puede llevar a consecuencias diferentes cada vez que lo juegues.
 
 ¡Disfruta el juego!
 
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="79" name="Te resignas y abandonas la misión." tags="Juego" position="100,3525" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Delex%20en%20el%20hospital.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Te ves obligado a ceder el mando a Jibo y te quedas en la colonia. Esperas que parta una nave para regresar a Huyuma.
+
+- F I N -
+
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="80" name="Desobedeces al doctor y decides, antes de que parta la nave, escaparte del hospital y continuar con la misión" tags="" position="300,3525" size="100,100"></tw-passagedata><tw-passagedata pid="81" name="Gracias, gobernador. Lamentamos el retraso, pero no se preocupe, partiremos a tiempo." tags="Juego" position="875,3250" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Maimal%20en%20su%20oficina.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Gobernador Maimal: &quot;No es lo mismo acomodar a la gente en cinco días que en diez, capitán, pero dado que no hay alternativa, tendremos que apurarnos.&quot;
+
+[[Si está de acuerdo, comenzaremos inmediatamente a llamar a los colonos para irlos ubicando en la nave. Luego de haber viajado tres meses con la nave casi vacía, se sentirá extraño encontrarnos con esa multitud.]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="82" name="Si está de acuerdo, comenzaremos inmediatamente a llamar a los colonos para irlos ubicando en la nave. Luego de haber viajado tres meses con la nave casi vacía, se sentirá extraño encontrarnos con esa multitud." tags="Juego" position="1050,3300" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Maimal%20en%20su%20oficina.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Gobernador Maimal: &quot;Espero que estén preparados para eso, capitán. Mientras su nave no despegue, siguen siendo mi gente, y no quisiera que sufrieran más stress del que ya tienen.&quot;
+
+[[Bueno, en realidad, es la primera vez que lo hacemos, pero supongo que lo haremos bien.]]
+[[Tranquilícese, gobernador, no es nuestra primera misión de este estilo.]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="83" name="Bueno, en realidad, es la primera vez que lo hacemos, pero supongo que lo haremos bien." tags="Juego" position="775,3450" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Maimal%20en%20su%20oficina.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Gobernador Maimal: &quot;Creo que les conviene que así sea, señores, si les interesan sus carreras. Ahora, si me disculpan, tengo cosas que hacer. Y ustedes también.&quot;
+
+[[Claro, gobernador. Lo dejamos.|luego de hablar con el gobernador 1]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="84" name="Tranquilícese, gobernador, no es nuestra primera misión de este estilo." tags="" position="1025,3425" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Maimal%20en%20su%20oficina.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Gobernador Maimal: &quot;Bien. Espero que así sea. Ahora, si me disculpan, tengo cosas que hacer. Y ustedes también.&quot;
+
+[[Claro, gobernador. Lo dejamos.|luego de hablar con el gobernador 2]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}</tw-passagedata><tw-passagedata pid="85" name="luego de hablar con el gobernador 1" tags="Juego" position="775,3575" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Jibo%20en%20Dayman.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Jibo: &quot;¿Tenías que decirle que era nuestra primera vez? &quot;
+
+[[No pude resistir la tentación de dejarlo intranquilo.|luego de hablar con el gobernador 3]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="86" name="luego de hablar con el gobernador 2" tags="" position="1175,3475" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Jibo%20en%20Dayman.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Jibo: &quot;Perdona, pero, ¿cuánto tuvimos una misión como ésta?&quot;
+
+[[Bueno, hace dos años llevamos a tres personas a Glayborh. ¿Ya lo olvidaste?]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="87" name="luego de hablar con el gobernador 3" tags="" position="950,3750" size="100,100"></tw-passagedata><tw-passagedata pid="88" name="Bueno, hace dos años llevamos a tres personas a Glayborh. ¿Ya lo olvidaste?" tags="Juego" position="1025,3600" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;Jibo%20en%20Dayman.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Jibo: &quot;¿Y te parece que tres es igual a trescientos cincuenta y dos? &quot;
+
+[[No, pero él no lo sabe, ¿verdad?.|luego de hablar con el gobernador 3]]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
 [[Volver al Menú Principal|Menú]] </tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
