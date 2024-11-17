@@ -16,6 +16,13 @@ font-size: 40px;
 line-height: normal;
 }
 
+tw-passage[tags~="Acerca_de"] {
+text-align: center;
+color: red;
+font-size: 30px;
+line-height: normal;
+}
+
 tw-passage[tags~="Juego"] {
 text-align: center;
 color: cyan;
@@ -34,7 +41,8 @@ tw-story[tags~="Inicio"] {
 
 [[Nuevo juego]]
 [[Cargar partida]]
-</tw-passagedata><tw-passagedata pid="2" name="Nuevo juego" tags="Juego" position="375,50" size="100,100">&lt;/style&gt;
+
+[[Acerca de]]</tw-passagedata><tw-passagedata pid="2" name="Nuevo juego" tags="Juego" position="375,50" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://cdn.leonardo.ai/users/321f686a-16f6-440a-a132-ebd6d0c5d0a6/generations/43eb26b2-60bb-4ec6-a7be-198780eed8d1/Leonardo_Phoenix_a_dramatic_highcontrast_cinematic_photo_of_a_0.jpg&quot; width=100%&gt;
 &lt;/div&gt;
@@ -1255,7 +1263,7 @@ No son los mejores días de tu vida y no te sientes muy feliz de pasar los últi
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="64" name="internado grave" tags="Juego" position="900,2300" size="100,100">(if: ($cap1_alergia is &gt;=5))[
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="64" name="internado grave" tags="Juego" position="775,2525" size="100,100">(if: ($cap1_alergia is &gt;=5))[
 &lt;/style&gt;
 &lt;img
 src=&quot;Enfermería.jpg&quot; width=100%&gt;
@@ -1284,7 +1292,7 @@ No la pasas muy bien esos días. Los recursos de la enfermería de la nave son l
 ]}
 
 ]
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="65" name="en el hospital" tags="Juego" position="75,2675" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="65" name="en el hospital" tags="Juego" position="350,2575" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;Doctor%20en%20el%20hospital.jpg&quot; width=100%&gt;
 &lt;/div&gt;
@@ -1301,7 +1309,7 @@ Doctor Rkimell: &quot;Capitán Bran, soy el doctor Rkimell. Lo tendremos en obse
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="66" name="con el gobernador" tags="" position="675,2700" size="100,100"></tw-passagedata><tw-passagedata pid="67" name="&quot;¿Cuánto tiempo, doctor? Debo partir en cinco días." tags="Juego" position="225,2725" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="66" name="con el gobernador" tags="" position="700,3250" size="100,100">(set:$cap2_salud_Delex to 2)</tw-passagedata><tw-passagedata pid="67" name="&quot;¿Cuánto tiempo, doctor? Debo partir en cinco días." tags="Juego" position="225,2725" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;Doctor%20en%20el%20hospital.jpg&quot; width=100%&gt;
 &lt;/div&gt;
@@ -1422,7 +1430,7 @@ Jibo: &quot;Sí, hablé con él. No está demasiado feliz con estos contratiempo
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="74" name="&quot;Bien hecho, Jibo. Dile que lo iré a ver en cuanto pueda.&quot;" tags="Juego" position="325,3100" size="100,100">&lt;/style&gt;
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="74" name="&quot;Bien hecho, Jibo. Dile que lo iré a ver en cuanto pueda.&quot;" tags="Juego" position="325,3125" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;Jibo%20en%20el%20hospital.jpg&quot; width=100%&gt;
 &lt;/div&gt;
@@ -1439,7 +1447,59 @@ Jibo: &quot;Creo que te caerá peor que el ajo tircúreo. En fin, te dejo. Desca
     Error: La partida no se ha guardado
   ]
 ]}
-[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="75" name="Delex internado" tags="" position="275,3250" size="100,100"></tw-passagedata></tw-storydata>
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="75" name="Delex internado" tags="Juego" position="350,3275" size="100,100">(set:$cap2_salud_Delex to (random:0,3))
+(if: ($cap2_salud_Delex is 0))[
+&lt;/style&gt;
+&lt;img
+src=&quot;Hospital.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Realmente tienes mala suerte. Contraes un virus intrahospitalario y falleces dos días después. Jibo toma el mando de la nave y continúa con la misión.
+
+- F I N -
+
+ ](else: )[
+ &lt;/style&gt;
+&lt;img
+src=&quot;Doctor%20en%20el%20hospital.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+Pasan los días y el doctor viene a verte.
+(if: ($cap2_salud_Delex is 1))[
+Doctor Rkimell: &quot;Capitán, tengo malas noticias. Aunque su condición ha mejorado, los estudios que le hemos hecho me dicen que no está en condiciones de hacer un viaje. Deberá quedarse internado más tiempo, no sabría decir cuánto.&quot;
+
+[[&quot;¡Doctor! ¡Debo continuar con mi misión!&quot;]]
+
+](else: )[
+Doctor Rkimell: &quot;Capitán, tengo buenas noticias. Mañana por la mañana le daré el alta. Podrá continuar con su misión sin problemas.
+
+[[&quot;¡Gracias, doctor! Temí que me dijera que no podía seguir.&quot;]]
+
+]
+
+{(link:&quot;Guardar partida&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    
+    Partida guardada
+  ](else: )[
+    Error: La partida no se ha guardado
+  ]
+]}
+]
+[[Volver al Menú Principal|Menú]] </tw-passagedata><tw-passagedata pid="76" name="&quot;¡Doctor! ¡Debo continuar con mi misión!&quot;" tags="" position="175,3400" size="100,100"></tw-passagedata><tw-passagedata pid="77" name="&quot;¡Gracias, doctor! Temí que me dijera que no podía seguir.&quot;" tags="" position="525,3400" size="100,100"></tw-passagedata><tw-passagedata pid="78" name="Acerca de" tags="Acerca_de" position="900,25" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;kerranitas_acerca_de.jpg&quot; width=100%&gt;
+&lt;/div&gt;
+
+El legado de los kerranitas
+
+por FJ-GAMES
+
+En este juego las decisiones que tomes llevarán la historia por caminos totalmente diferentes, incluyendo la finalización prematura del juego. Ten en cuenta que también existen eventos aleatorios, lo que implica que una misma decisión te puede llevar a consecuencias diferentes cada vez que lo juegues.
+
+¡Disfruta el juego!
+
+[[Volver al Menú Principal|Menú]] </tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
